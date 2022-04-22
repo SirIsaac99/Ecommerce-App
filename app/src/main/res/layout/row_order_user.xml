@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"
+    android:layout_marginBottom="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/orderIdEt"
+            android:text="Order: 12345"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateEt"
+            android:layout_toStartOf="@id/nextIv"
+            android:text="22/02/2022"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shopnameEt"
+            android:text="Isa Shop"
+            android:layout_below="@id/orderIdEt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amountEt"
+            android:text="Total amount $44.44"
+            android:layout_below="@id/shopnameEt"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusEt"
+            android:layout_below="@id/shopnameEt"
+            android:layout_toStartOf="@id/nextIv"
+            android:text="In Progress"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorGreen"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextIv"
+            android:src="@drawable/ic_next_gray"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/black"
+            android:text="Order To"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shopnameEt"
+            android:textColor="@color/black"
+            android:text="Shop Name"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray1"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cartItemsRv"
+            android:padding="5dp"
+            tools:listitem="@layout/row_cartitems"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:id="@+id/pricesLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sTotalsLabel"
+                android:padding="5dp"
+                android:text="Sub Total"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sTotalIv"
+                android:padding="5dp"
+                android:text="$10"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dFeeLabel"
+                android:padding="5dp"
+                android:layout_below="@id/sTotalsLabel"
+                android:text="Delivery Fee"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dFeeIv"
+                android:padding="5dp"
+                android:text="$15"
+                android:layout_below="@id/sTotalsLabel"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalLabel"
+                android:padding="5dp"
+                android:layout_below="@id/dFeeLabel"
+                android:text="Total Price"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalIv"
+                android:padding="5dp"
+                android:text="$25"
+                android:layout_below="@id/dFeeLabel"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkoutBtn"
+            android:text="Confirm Order"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
